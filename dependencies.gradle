@@ -27,6 +27,10 @@ ext.deps = [
                 "org.mapstruct:mapstruct:$versions.mapstruct"
         ],
 
+        mapstruct_annotations: [
+                "org.mapstruct:mapstruct-processor:$versions.mapstruct"
+        ],
+
         springfox: [
                 "io.springfox:springfox-swagger2:$versions.springfox",
                 "io.springfox:springfox-swagger-ui:$versions.springfox"

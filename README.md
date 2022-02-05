@@ -22,3 +22,7 @@ All logs are saved in gitignored `log` folder
 ## Endpoint
 
 While application is running proceed to `http://localhost:8080/swagger-ui.html/` for endpoint documentation
+
+## Testing
+
+Type `./gradlew test (gradlew test on windows)` for running basic test cases

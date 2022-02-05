@@ -29,7 +29,7 @@ dependencies {
 
 	compileOnly deps.lombok
 	annotationProcessor deps.lombok
-	annotationProcessor "org.mapstruct:mapstruct-processor:1.4.2.Final"
+	annotationProcessor deps.mapstruct_annotations
 
 	runtimeOnly deps.h2
 
