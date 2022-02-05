@@ -3,7 +3,6 @@ package ee.alekal.sectorsback.service;
 
 import ee.alekal.sectorsback.dao.SectorRepository;
 import ee.alekal.sectorsback.entities.SectorEntity;
-import ee.alekal.sectorsback.entities.enums.SectorType;
 import ee.alekal.sectorsback.exceptions.sector.SectorNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -25,6 +25,7 @@ repositories {
 dependencies {
 	implementation deps.spring
 	implementation deps.mapstruct
+	implementation deps.springfox
 
 	compileOnly deps.lombok
 	annotationProcessor deps.lombok
