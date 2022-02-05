@@ -32,11 +32,16 @@ public class SectorService {
     }
 
     public ResponseEntity<List<SectorEntity>> getSectorsByType(String type) {
-        log.info("Looking for sector with type {}", type);
+        log.info("Getting sector with type {}", type);
         if (typeExists(type)) {
             return new ResponseEntity<>(sectorRepository.findAllByType(type), HttpStatus.OK);
         }
         throw new SectorNotFoundException("Sector with given type was not founded");
+    }
+
+    public List<SectorEntity> getSectorsByParentId(Long id) {
+        log.info("Getting sector by parent sector id={}", id);
+        return sectorRepository.findByParentSectorId(id);
     }
 
     private boolean typeExists(String type) {

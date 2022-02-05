@@ -80,7 +80,7 @@ public class UserService {
             throw new RuntimeException(e);
         }
 
-        log.info("Downloading user {}", user);
+        log.info("Downloading user's data {}", user);
 
         return downloadFile(file, servletContext);
     }

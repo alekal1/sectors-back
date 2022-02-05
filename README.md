@@ -15,13 +15,13 @@ All dependencies are stored in separate `dependencies.gradle` file for comfort r
 
 ## Logging
 
-This projects uses external slf4j lombok logging tool. 
+This project uses external slf4j lombok logging tool. 
 
 All logs are saved in gitignored `log` folder
 
 ## Endpoint
 
-While application is running proceed to `http://localhost:8080/swagger-ui.html/` for endpoint documentation
+While application is running proceed to `http://localhost:8080/swagger-ui.html` for endpoint documentation
 
 ## Testing
 
