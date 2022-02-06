@@ -26,12 +26,12 @@ public class UserController {
     private final UserService userService;
 
 
-    @PostMapping("/add")
+    @PostMapping(value = "/add", produces = "application/json")
     public UserDto addUser(@RequestBody UserDto userDto) {
         return userService.addUser(userDto);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping(value = "/{id}", produces = "application/json")
     public UserEntity getUserById(@PathVariable Long id) {
         return userService.getUserById(id);
     }

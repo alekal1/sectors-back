@@ -22,7 +22,7 @@ public class SectorController {
 
     private final SectorService sectorService;
 
-    @GetMapping
+    @GetMapping(produces = "application/json")
     public List<SectorEntity> getAllSectors() {
         return sectorService.getAllSectors();
     }
@@ -32,9 +32,8 @@ public class SectorController {
         return sectorService.getSectorsByType(type);
     }
 
-    @GetMapping("/parent/{id}")
+    @GetMapping(value = "/parent/{id}", produces = "application/json")
     public List<SectorEntity> getSectorsByParentId(@PathVariable Long id) {
         return sectorService.getSectorsByParentId(id);
     }
-
 }
