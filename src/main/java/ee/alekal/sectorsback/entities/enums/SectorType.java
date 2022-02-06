@@ -4,6 +4,7 @@ import lombok.Getter;
 
 public enum SectorType {
 
+    PRIMARY("primary"),
     TOP("top"),
     MEDIUM("medium"),
     LOW("low");

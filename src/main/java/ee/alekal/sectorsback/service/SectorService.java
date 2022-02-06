@@ -15,6 +15,7 @@ import java.util.List;
 
 import static ee.alekal.sectorsback.entities.enums.SectorType.LOW;
 import static ee.alekal.sectorsback.entities.enums.SectorType.MEDIUM;
+import static ee.alekal.sectorsback.entities.enums.SectorType.PRIMARY;
 import static ee.alekal.sectorsback.entities.enums.SectorType.TOP;
 
 @Slf4j
@@ -46,6 +47,7 @@ public class SectorService {
 
     private boolean typeExists(String type) {
         var listOfTypes = List.of(
+                PRIMARY.getType(),
                 TOP.getType(),
                 MEDIUM.getType(),
                 LOW.getType()
