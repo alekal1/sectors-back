@@ -27,7 +27,7 @@ public class UserController {
 
 
     @PostMapping("/add")
-    public ResponseEntity<HttpStatus> addUser(@RequestBody UserDto userDto) {
+    public UserDto addUser(@RequestBody UserDto userDto) {
         return userService.addUser(userDto);
     }
 
@@ -36,8 +36,9 @@ public class UserController {
         return userService.getUserById(id);
     }
 
-    @GetMapping("/download/{name}")
-    public ResponseEntity<InputStreamResource> downloadUserData(@PathVariable String name) {
-        return userService.downloadUserData(name);
+    @GetMapping("/download/{id}/{name}")
+    public ResponseEntity<InputStreamResource> downloadUserData(@PathVariable Long id,
+                                                                @PathVariable String name) {
+        return userService.downloadUserData(id, name);
     }
 }

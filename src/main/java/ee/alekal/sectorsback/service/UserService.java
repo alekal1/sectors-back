@@ -11,6 +11,7 @@ import ee.alekal.sectorsback.exceptions.user.UserNotFoundException;
 import ee.alekal.sectorsback.mapper.UserMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.catalina.User;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -49,7 +50,7 @@ public class UserService {
     }
 
 
-    public ResponseEntity<HttpStatus> addUser(UserDto userDto) {
+    public UserDto addUser(UserDto userDto) {
         var entity = mapper.userDtoToEntity(userDto);
 
         var listOfSectors = getSectors(userDto.getSectorsIds());
@@ -58,13 +59,14 @@ public class UserService {
 
         userRepository.saveAndFlush(entity);
 
+        userDto.setId(entity.getId());
         log.info("User {} was successfully added", entity);
 
-        return new ResponseEntity<>(HttpStatus.OK);
+        return userDto;
     }
 
-    public ResponseEntity<InputStreamResource> downloadUserData(String name) {
-        var user = userRepository.findByUsername(name);
+    public ResponseEntity<InputStreamResource> downloadUserData(Long id, String name) {
+        var user = userRepository.findByIdAndUsername(id, name);
 
         if (user == null) {
             throw new UserNotFoundException("User with given name was not found.");
