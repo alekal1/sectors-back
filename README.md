@@ -10,7 +10,7 @@ This repository contains a project structure and all implemented functionality o
 
 The project uses Spring Boot and can be built/deployed with Gradle.
 
-A file-based embedded HSQL database is already configured. The database file is created and stored in the git-ignored `db` dir. See `src/main/resources/application.properties`. Spring Boot automatically executes a database initialization script `src/main/resources/schema.sql` on first startup.
+A file-based embedded HSQL database is already configured. The database file is created and stored in the git-ignored `db` dir. See `src/main/resources/application.properties`. Spring Boot automatically executes a database initialization script on first startup.
 
 All dependencies are stored in separate `dependencies.gradle` file for comfort reading and adding new dependencies.
 
