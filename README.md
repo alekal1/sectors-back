@@ -3,6 +3,7 @@
 This repository contains code of sector from application.
 Front-end repository could be founded [here](https://github.com/alekal1/sectors-front)
 * Made by Aleksandr Aleksandrov
+* Used IDE Intellij Idea
 
 ## Short overview
 
